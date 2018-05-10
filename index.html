@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student-Grade Manager</title>
+</head>
+<body>
+
+<!-- ======================================== HEADER ========================================= -->
+
+<header>
+    <img src="assets/hat.jpg" width="4%">
+    <h1>Student-Grade Manager</h1>
+</header>
+
+<!-- ======================================== NAVBAR ========================================= -->
+
+<nav class="navbar">
+    <ul>
+        <li>Manage students</li>
+        <li>Manage courses</li>
+    </ul>
+</nav>
+
+<!-- ======================================= STUDENTS ========================================= -->
+
+<article class="student-list">
+    <h2>List of students</h2>
+    <form>
+        <table class="student-list-table" border="1px">
+            <tr>
+                <th>Lp</th>
+                <th><input type="text" name="indexColumn" value ="Index"><button type="button">Go</button></th>
+                <th><input type="text" name="firstNameColumn" value ="First Name"><button type="button">Go</button></th>
+                <th><input type="text" name="lastNameColumn" value ="Last Name"><button type="button">Go</button></th>
+                <th><input type="text" name="birthdayColumn" value ="Birthday"><button type="button">Go</button></th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="index" value=121578></td>
+                <td><input type="text" name="firstName" value="Jan"></td>
+                <td><input type="text" name="lastName" value="Nowak"></td>
+                <td><input type="date" name="birthday" value="1995-02-12"></td>
+                <td>
+                    <button type="button">Delete</button>
+                    <button type="button">See grades</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" name="index" value=121567></td>
+                <td><input type="text" name="firstName" value="Adam"></td>
+                <td><input type="text" name="lastName" value="Kowalski"></td>
+                <td><input type="date" name="birthday" value="1995-12-13"></td>
+                <td>
+                    <button type="button">Delete</button>
+                    <button type="button">See grades</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</article>
+
+<!-- ==================================== STUDENT GRADES ======================================= -->
+
+<article class="student-grades">
+    <h2>Student's grades</h2>
+    <form>
+        <table class="student-grades-table" border="1px">
+            <tr>
+                <!-- Jeden pusty wiersz do dodawania -->
+                <th>Lp</th>
+                <th><input type="text" name="valueColumn" value ="Value"><button type="button">Go</button></th>
+                <th><input type="text" name="dateColumn" value ="Date"><button type="button">Go</button></th>
+                <th><input type="text" name="courseColumn" value ="Course"><button type="button">Go</button></th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="value" value=4.0></td>
+                <td><input type="date" name="date" value=2018-05-10></td>
+                <td><input type="text" name="courses" value="English"></td>
+                <td>
+                    <button type="button">Edit</button>
+                    <button type="button">Delete</button>
+                    <button type="button">More info</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</article>
+
+<!-- ======================================= COURSES ========================================= -->
+
+<article class="course-list">
+    <h2>List of courses</h2>
+    <form>
+        <table class="course-list-table" border="1px">
+            <tr>
+                <th>Lp</th>
+                <th><input type="text" name="nameColumn" value ="Name"><button type="button">Go</button></th>
+                <th><input type="text" name="lecturerColumn" value ="Lecturer"><button type="button">Go</button></th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="name" value="English"></td>
+                <td><input type="text" name="lecturer" value="Jim Beam"></td>
+                <td>
+                    <button type="button">Edit</button>
+                    <button type="button">Delete</button>
+                    <button type="button">More info</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</article>
+
+<!-- ======================================= FOOTER ========================================== -->
+
+<footer>
+    <p>&copy; 2018 Lukasz Jędryczka (lukaszjedryczka.biuro@gmail.com)</p>
+    <a href="https://www2.cs.put.poznan.pl/">https://www2.cs.put.poznan.pl/</a>
+    <p>Wszelkie prawa zastrzeżone</p>
+</footer>
+
+</body>
+</html>
