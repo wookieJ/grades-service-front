@@ -20,6 +20,7 @@
     <ol>
         <li><a href="#student-list-content">Manage students</a></li>
         <li><a href="#course-list-content">Manage courses</a></li>
+        <li><a href="#student-grades-content">Grades table</a></li>
     </ol>
 </nav>
 
@@ -41,7 +42,9 @@
                     <th><input type="text" name="lastNameColumn" value="Last Name">
                         <button type="button">Go</button>
                     </th>
-                    <th><input type="text" name="birthdayColumn" value="Birthday">
+                    <th>
+                        <input type="text" onfocus="(this.type='date')" name="birthdayColumn"
+                               required="required" placeholder="pick date of birth">
                         <button type="button">Go</button>
                     </th>
                     <th>Actions</th>
@@ -71,10 +74,10 @@
                 <!-- Empty row for adding new student -->
                 <tr>
                     <td>3</td>
-                    <td></td>
+                    <td><input type="text" name="index" disabled></td>
                     <td><input type="text" name="firstName" required="required" placeholder="first name"></td>
                     <td><input type="text" name="lastName" required="required" placeholder="last name"></td>
-                    <td><input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="birthday"
+                    <td><input type="text" onfocus="(this.type='date')" name="birthday"
                                required="required" placeholder="pick date of birth"></td>
                     <td>
                         <button type="submit">Add</button>
@@ -100,14 +103,19 @@
                     <th><input type="text" name="dateColumn" value="Date">
                         <button type="button">Go</button>
                     </th>
-                    <th><input type="text" name="courseColumn" value="Course">
+                    <th>
+                        <select name="course" id="courseColumnSelector">
+                            <option value="Angielski" selected>Angielski</option>
+                            <option value="Niemiecki">Niemiecki</option>
+                            <option value="WF">WF</option>
+                        </select>
                         <button type="button">Go</button>
                     </th>
                     <th>Actions</th>
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><input type="number" name="value" step = 0.5 value=4.0></td>
+                    <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=4.0></td>
                     <td><input type="date" name="date" value=2018-05-10></td>
                     <td>
                         <select name="course" id="1courseSelector">
@@ -121,11 +129,28 @@
                         <button type="button">More info</button>
                     </td>
                 </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=5.0></td>
+                    <td><input type="date" name="date" value=2018-05-14></td>
+                    <td>
+                        <select name="course" id="1courseSelector">
+                            <option value="Angielski">Angielski</option>
+                            <option value="Niemiecki" selected>Niemiecki</option>
+                            <option value="WF">WF</option>
+                        </select>
+                    <td>
+                        <button type="button">Edit</button>
+                        <button type="button">Delete</button>
+                        <button type="button">More info</button>
+                    </td>
+                </tr>
                 <!-- Empty row for adding new grade -->
                 <tr>
                     <td>2</td>
-                    <td><input type="number" name="value" step=0.5 required="required" placeholder="value"></td>
-                    <td><input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date"
+                    <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 required="required"
+                               placeholder="value"></td>
+                    <td><input type="text" onfocus="(this.type='date')" name="date"
                                required="required" placeholder="pick date"></td>
                     <td>
                         <select name="course" id="courseSelector">
@@ -135,7 +160,7 @@
                         </select>
                     </td>
                     <td>
-                    <button type="submit">Add</button>
+                        <button type="submit">Add</button>
                     </td>
                 </tr>
             </table>
@@ -162,8 +187,18 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><input type="text" name="name" value="English"></td>
+                    <td><input type="text" name="name" value="Angielski"></td>
                     <td><input type="text" name="lecturer" value="Jim Beam"></td>
+                    <td>
+                        <button type="button">Edit</button>
+                        <button type="button">Delete</button>
+                        <button type="button">More info</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" name="name" value="Niemiecki"></td>
+                    <td><input type="text" name="lecturer" value="Anna Mądra"></td>
                     <td>
                         <button type="button">Edit</button>
                         <button type="button">Delete</button>
