@@ -18,14 +18,14 @@
 
 <nav class="navbar">
     <ol>
-        <li><a href="http://localhost:63342/grades-service-front/index.html#student-list">Manage students</a></li>
-        <li><a href="http://localhost:63342/grades-service-front/index.html#course-list">Manage courses</a></li>
+        <li><a href="#student-list-content">Manage students</a></li>
+        <li><a href="#course-list-content">Manage courses</a></li>
     </ol>
 </nav>
 
 <!-- ======================================= STUDENTS ========================================= -->
 
-<section id="student-list">
+<section class="student-list-content" id="student-list-content">
     <article class="student-list">
         <h2>List of students</h2>
         <form>
@@ -48,7 +48,7 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><input type="text" name="index" value=121578></td>
+                    <td><input type="text" name="index" value=121578 readonly></td>
                     <td><input type="text" name="firstName" value="Jan"></td>
                     <td><input type="text" name="lastName" value="Nowak"></td>
                     <td><input type="date" name="birthday" value="1995-02-12"></td>
@@ -59,7 +59,7 @@
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><input type="text" name="index" value=121567></td>
+                    <td><input type="text" name="index" value=121567 readonly></td>
                     <td><input type="text" name="firstName" value="Adam"></td>
                     <td><input type="text" name="lastName" value="Kowalski"></td>
                     <td><input type="date" name="birthday" value="1995-12-13"></td>
@@ -87,13 +87,12 @@
 
 <!-- ==================================== STUDENT GRADES ======================================= -->
 
-<section id="student-grades">
+<section class="student-grades-content" id="student-grades-content">
     <article class="student-grades">
         <h2>Student's grades</h2>
         <form>
             <table class="student-grades-table" border="1px">
                 <tr>
-                    <!-- Jeden pusty wiersz do dodawania -->
                     <th>Lp</th>
                     <th><input type="text" name="valueColumn" value="Value">
                         <button type="button">Go</button>
@@ -108,9 +107,14 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><input type="text" name="value" value=4.0></td>
+                    <td><input type="number" name="value" step = 0.5 value=4.0></td>
                     <td><input type="date" name="date" value=2018-05-10></td>
-                    <td><input type="text" name="courses" value="English"></td>
+                    <td>
+                        <select name="course" id="1courseSelector">
+                            <option value="Angielski" selected>Angielski</option>
+                            <option value="Niemiecki">Niemiecki</option>
+                            <option value="WF">WF</option>
+                        </select>
                     <td>
                         <button type="button">Edit</button>
                         <button type="button">Delete</button>
@@ -120,12 +124,18 @@
                 <!-- Empty row for adding new grade -->
                 <tr>
                     <td>2</td>
-                    <td><input type="text" name="value" required="required" placeholder="value"></td>
+                    <td><input type="number" name="value" step=0.5 required="required" placeholder="value"></td>
                     <td><input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date"
                                required="required" placeholder="pick date"></td>
-                    <td><input type="text" name="course" required="required" placeholder="course"></td>
                     <td>
-                        <button type="submit">Add</button>
+                        <select name="course" id="courseSelector">
+                            <option value="Angielski" selected>Angielski</option>
+                            <option value="Niemiecki">Niemiecki</option>
+                            <option value="WF">WF</option>
+                        </select>
+                    </td>
+                    <td>
+                    <button type="submit">Add</button>
                     </td>
                 </tr>
             </table>
@@ -135,7 +145,7 @@
 
 <!-- ======================================= COURSES ========================================= -->
 
-<section id="course-list">
+<section class="course-list-content" id="course-list-content">
     <article class="course-list">
         <h2>List of courses</h2>
         <form>

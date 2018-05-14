@@ -1,0 +1,23 @@
+.student-list-content {
+    display: none;
+}
+
+.student-list-content:target {
+    display: block;
+}
+
+.student-grades-content {
+    display: none;
+}
+
+.student-grades-content:target {
+    display: block;
+}
+
+.course-list-content {
+    display: none;
+}
+
+.course-list-content:target {
+    display: block;
+}
