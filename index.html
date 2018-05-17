@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="resources/style.css">
@@ -10,215 +10,200 @@
 <!-- ======================================== HEADER ========================================= -->
 
 <header>
-    <img src="assets/hat.jpg" width="4%">
+    <img src="assets/hat.png" width="100" alt="Brak">
     <h1>Student-Grade Manager</h1>
 </header>
 
 <!-- ======================================== NAVBAR ========================================= -->
+<section class="contentBody">
+    <nav class="navbar">
+        <div><a href="#student-list-content">Manage students</a><br/></div>
+        <div><a href="#course-list-content">Manage courses</a><br/></div>
+        <div><a href="#student-grades-content">Grades table</a></div>
+    </nav>
 
-<nav class="navbar">
-    <ol>
-        <li><a href="#student-list-content">Manage students</a></li>
-        <li><a href="#course-list-content">Manage courses</a></li>
-        <li><a href="#student-grades-content">Grades table</a></li>
-    </ol>
-</nav>
+    <!-- ======================================= STUDENTS ========================================= -->
+    <section class="contentTables">
+        <article class="student-list-content" id="student-list-content">
+            <h2>List of students</h2>
+            <form>
+                <table class="student-list-table">
+                    <tr>
+                        <th>Lp</th>
+                        <th><input type="text" name="indexColumn" value="Index">
+                            <!--<button type="button">Go</button>-->
+                        </th>
+                        <th><input type="text" name="firstNameColumn" value="First Name">
+                        </th>
+                        <th><input type="text" name="lastNameColumn" value="Last Name">
+                        </th>
+                        <th>
+                            <input type="text" onfocus="(this.type='date')" name="birthdayColumn"
+                                   required="required" placeholder="pick date of birth">
+                        </th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="index" value=121578 readonly></td>
+                        <td><input type="text" name="firstName" value="Jan" placeholder="First name"></td>
+                        <td><input type="text" name="lastName" value="Nowak" placeholder="Last name"></td>
+                        <td><input type="date" name="birthday" value="1995-02-12"></td>
+                        <td>
+                            <button type="button">Delete</button>
+                            <button type="button">See grades</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="index" value=121567 readonly></td>
+                        <td><input type="text" name="firstName" value="Adam" placeholder="First name"></td>
+                        <td><input type="text" name="lastName" value="Kowalski" placeholder="Last name"></td>
+                        <td><input type="date" name="birthday" value="1995-12-13"></td>
+                        <td>
+                            <button type="button">Delete</button>
+                            <button type="button">See grades</button>
+                        </td>
+                    </tr>
+                    <!-- Empty row for adding new student -->
+                    <tr>
+                        <td>3</td>
+                        <td><input type="text" name="index" disabled></td>
+                        <td><input type="text" name="firstName" required="required" placeholder="first name"></td>
+                        <td><input type="text" name="lastName" required="required" placeholder="last name"></td>
+                        <td><input type="text" onfocus="(this.type='date')" name="birthday"
+                                   required="required" placeholder="pick date of birth"></td>
+                        <td>
+                            <button type="submit">Add</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </article>
 
-<!-- ======================================= STUDENTS ========================================= -->
+        <!-- ==================================== STUDENT GRADES ======================================= -->
 
-<section class="student-list-content" id="student-list-content">
-    <article class="student-list">
-        <h2>List of students</h2>
-        <form>
-            <table class="student-list-table" border="1px">
-                <tr>
-                    <th>Lp</th>
-                    <th><input type="text" name="indexColumn" value="Index">
-                        <button type="button">Go</button>
-                    </th>
-                    <th><input type="text" name="firstNameColumn" value="First Name">
-                        <button type="button">Go</button>
-                    </th>
-                    <th><input type="text" name="lastNameColumn" value="Last Name">
-                        <button type="button">Go</button>
-                    </th>
-                    <th>
-                        <input type="text" onfocus="(this.type='date')" name="birthdayColumn"
-                               required="required" placeholder="pick date of birth">
-                        <button type="button">Go</button>
-                    </th>
-                    <th>Actions</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" name="index" value=121578 readonly></td>
-                    <td><input type="text" name="firstName" value="Jan"></td>
-                    <td><input type="text" name="lastName" value="Nowak"></td>
-                    <td><input type="date" name="birthday" value="1995-02-12"></td>
-                    <td>
-                        <button type="button">Delete</button>
-                        <button type="button">See grades</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><input type="text" name="index" value=121567 readonly></td>
-                    <td><input type="text" name="firstName" value="Adam"></td>
-                    <td><input type="text" name="lastName" value="Kowalski"></td>
-                    <td><input type="date" name="birthday" value="1995-12-13"></td>
-                    <td>
-                        <button type="button">Delete</button>
-                        <button type="button">See grades</button>
-                    </td>
-                </tr>
-                <!-- Empty row for adding new student -->
-                <tr>
-                    <td>3</td>
-                    <td><input type="text" name="index" disabled></td>
-                    <td><input type="text" name="firstName" required="required" placeholder="first name"></td>
-                    <td><input type="text" name="lastName" required="required" placeholder="last name"></td>
-                    <td><input type="text" onfocus="(this.type='date')" name="birthday"
-                               required="required" placeholder="pick date of birth"></td>
-                    <td>
-                        <button type="submit">Add</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </article>
+        <article class="student-grades-content" id="student-grades-content">
+            <h2>Student's grades</h2>
+            <form>
+                <table class="student-grades-table">
+                    <tr>
+                        <th>Lp</th>
+                        <th><input type="text" name="valueColumn" value="Value" placeholder="Value">
+                        </th>
+                        <th><input type="text" name="dateColumn" value="Date" placeholder="Date">
+                        </th>
+                        <th>
+                            <select name="course" id="courseColumnSelector">
+                                <option value="Angielski" selected>Angielski</option>
+                                <option value="Niemiecki">Niemiecki</option>
+                                <option value="WF">WF</option>
+                            </select>
+                        </th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=4.0></td>
+                        <td><input type="date" name="date" value=2018-05-10></td>
+                        <td>
+                            <select name="course" id="1courseSelector">
+                                <option value="Angielski" selected>Angielski</option>
+                                <option value="Niemiecki">Niemiecki</option>
+                                <option value="WF">WF</option>
+                            </select>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                            <button type="button">More info</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=5.0></td>
+                        <td><input type="date" name="date" value=2018-05-14></td>
+                        <td>
+                            <select name="course" id="2courseSelector">
+                                <option value="Angielski">Angielski</option>
+                                <option value="Niemiecki" selected>Niemiecki</option>
+                                <option value="WF">WF</option>
+                            </select>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                            <button type="button">More info</button>
+                        </td>
+                    </tr>
+                    <!-- Empty row for adding new grade -->
+                    <tr>
+                        <td>2</td>
+                        <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 required="required"
+                                   placeholder="value"></td>
+                        <td><input type="text" onfocus="(this.type='date')" name="date"
+                                   required="required" placeholder="pick date"></td>
+                        <td>
+                            <select name="course" id="courseSelector">
+                                <option value="Angielski" selected>Angielski</option>
+                                <option value="Niemiecki">Niemiecki</option>
+                                <option value="WF">WF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="submit">Add</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </article>
+
+        <!-- ======================================= COURSES ========================================= -->
+
+        <article class="course-list-content" id="course-list-content">
+            <h2>List of courses</h2>
+            <form>
+                <table class="course-list-table">
+                    <tr>
+                        <th>Lp</th>
+                        <th><input type="text" name="nameColumn" value="Name" placeholder="Name">
+                        </th>
+                        <th><input type="text" name="lecturerColumn" value="Lecturer" placeholder="Lecturer">
+                        </th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="name" value="Angielski" placeholder="Name"></td>
+                        <td><input type="text" name="lecturer" value="Jim Beam" placeholder="Lecturer"></td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                            <button type="button">More info</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="name" value="Niemiecki" placeholder="Name"></td>
+                        <td><input type="text" name="lecturer" value="Anna Mądra" placeholder="Lecturer"></td>
+                        <td>
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                            <button type="button">More info</button>
+                        </td>
+                    </tr>
+                    <!-- Empty row for adding new course -->
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="name" required="required" placeholder="name"></td>
+                        <td><input type="text" name="lecturer" required="required" placeholder="lecturer"></td>
+                        <td>
+                            <button type="submit">Add</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </article>
+    </section>
 </section>
-
-<!-- ==================================== STUDENT GRADES ======================================= -->
-
-<section class="student-grades-content" id="student-grades-content">
-    <article class="student-grades">
-        <h2>Student's grades</h2>
-        <form>
-            <table class="student-grades-table" border="1px">
-                <tr>
-                    <th>Lp</th>
-                    <th><input type="text" name="valueColumn" value="Value">
-                        <button type="button">Go</button>
-                    </th>
-                    <th><input type="text" name="dateColumn" value="Date">
-                        <button type="button">Go</button>
-                    </th>
-                    <th>
-                        <select name="course" id="courseColumnSelector">
-                            <option value="Angielski" selected>Angielski</option>
-                            <option value="Niemiecki">Niemiecki</option>
-                            <option value="WF">WF</option>
-                        </select>
-                        <button type="button">Go</button>
-                    </th>
-                    <th>Actions</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=4.0></td>
-                    <td><input type="date" name="date" value=2018-05-10></td>
-                    <td>
-                        <select name="course" id="1courseSelector">
-                            <option value="Angielski" selected>Angielski</option>
-                            <option value="Niemiecki">Niemiecki</option>
-                            <option value="WF">WF</option>
-                        </select>
-                    <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Delete</button>
-                        <button type="button">More info</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=5.0></td>
-                    <td><input type="date" name="date" value=2018-05-14></td>
-                    <td>
-                        <select name="course" id="1courseSelector">
-                            <option value="Angielski">Angielski</option>
-                            <option value="Niemiecki" selected>Niemiecki</option>
-                            <option value="WF">WF</option>
-                        </select>
-                    <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Delete</button>
-                        <button type="button">More info</button>
-                    </td>
-                </tr>
-                <!-- Empty row for adding new grade -->
-                <tr>
-                    <td>2</td>
-                    <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 required="required"
-                               placeholder="value"></td>
-                    <td><input type="text" onfocus="(this.type='date')" name="date"
-                               required="required" placeholder="pick date"></td>
-                    <td>
-                        <select name="course" id="courseSelector">
-                            <option value="Angielski" selected>Angielski</option>
-                            <option value="Niemiecki">Niemiecki</option>
-                            <option value="WF">WF</option>
-                        </select>
-                    </td>
-                    <td>
-                        <button type="submit">Add</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </article>
-</section>
-
-<!-- ======================================= COURSES ========================================= -->
-
-<section class="course-list-content" id="course-list-content">
-    <article class="course-list">
-        <h2>List of courses</h2>
-        <form>
-            <table class="course-list-table" border="1px">
-                <tr>
-                    <th>Lp</th>
-                    <th><input type="text" name="nameColumn" value="Name">
-                        <button type="button">Go</button>
-                    </th>
-                    <th><input type="text" name="lecturerColumn" value="Lecturer">
-                        <button type="button">Go</button>
-                    </th>
-                    <th>Actions</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" name="name" value="Angielski"></td>
-                    <td><input type="text" name="lecturer" value="Jim Beam"></td>
-                    <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Delete</button>
-                        <button type="button">More info</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><input type="text" name="name" value="Niemiecki"></td>
-                    <td><input type="text" name="lecturer" value="Anna Mądra"></td>
-                    <td>
-                        <button type="button">Edit</button>
-                        <button type="button">Delete</button>
-                        <button type="button">More info</button>
-                    </td>
-                </tr>
-                <!-- Empty row for adding new course -->
-                <tr>
-                    <td>2</td>
-                    <td><input type="text" name="name" required="required" placeholder="name"></td>
-                    <td><input type="text" name="lecturer" required="required" placeholder="lecturer"></td>
-                    <td>
-                        <button type="submit">Add</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </article>
-</section>
-
 <!-- ======================================= FOOTER ========================================== -->
 
 <footer>
