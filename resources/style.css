@@ -25,7 +25,7 @@
 
 /* --------- flex --------- */
 nav {
-    flex: 2 0 12em;
+    flex: 2 0 100px;
 }
 
 .contentBody {
@@ -71,19 +71,27 @@ footer {
     background: linear-gradient(#CFDFE5, #FFFFFF);
 }
 
-/* ---------- Paadding, margin ------- */
+footer section p,
+footer section a{
+    color: #1f1f1f;
+}
+
+/* ---------- Padding, margin ------- */
 header {
-    padding-top: 1.5em;
+    /*padding-top: 1.5em;*/
 }
 
 header h1 {
-    padding-top: 0.7em;
-    padding-left: 0.2em;
+    /*padding-top: 0.7em;*/
+    /*padding-left: 0.2em;*/
+    padding-bottom: 0.2em;
+    margin: auto;
 }
 
 header img {
-    padding-left: 0.2em;
-    padding-top: 0.2em;
+    padding: 1em;
+    width: 6em;
+    height:4em;
 }
 
 nav div {
@@ -177,10 +185,14 @@ table tr td select:hover {
     color: black;
 }
 
+table tr td {
+    text-align: center;
+}
+
 table tr th input,
 table tr td input,
 table tr th select,
-table tr td select{
+table tr td select {
     width: 100%;
     background-color: inherit;
     border: none;
@@ -195,11 +207,11 @@ table tr td select:invalid {
     color: red;
 }
 
-table tr th input::placeholder{
+table tr th input::placeholder {
     color: inherit;
 }
 
-table tr td input::placeholder{
+table tr td input::placeholder {
     color: grey;
 }
 

@@ -8,7 +8,7 @@
 <body>
 
 <header>
-    <img src="resources/assets/hat.png" width="180em" alt="Brak">
+    <img src="resources/assets/hat.png" alt="No photo" width="6em" height="4em">
     <h1>Student-Grade Manager</h1>
 </header>
 
@@ -27,7 +27,6 @@
                     <tr>
                         <th>Lp</th>
                         <th><input type="text" name="indexColumn" value="Index">
-                            <!--<button type="button">Go</button>-->
                         </th>
                         <th><input type="text" name="firstNameColumn" value="First Name">
                         </th>
@@ -79,7 +78,7 @@
                         <td><input type="text" name="index" disabled></td>
                         <td><input type="text" name="firstName" required="required" placeholder="first name"></td>
                         <td><input type="text" name="lastName" required="required" placeholder="last name"></td>
-                        <td><input type="text" onfocus="(this.type='date')" name="birthday"
+                        <td><input type="text" onfocus="(this.type='date')" onblur="this.type='text'" name="birthday"
                                    required="required" placeholder="Date of birth"></td>
                         <td>
                             <button class="add-student-button" type="submit"></button>
@@ -150,7 +149,7 @@
                         <td><input type="text" onfocus="(this.type='date')" onmouseout="this.type='text'" name="date"
                                    required="required" placeholder="Date of birth"></td>
                         <td>
-                            <select name="course" id="courseSelector">
+                            <select name="course" id="3courseSelector">
                                 <option value="Angielski" selected>Angielski</option>
                                 <option value="Niemiecki">Niemiecki</option>
                                 <option value="WF">WF</option>
@@ -198,7 +197,7 @@
                     </tr>
                     <!-- Empty row for adding new course -->
                     <tr>
-                        <td>2</td>
+                        <td>3</td>
                         <td><input type="text" name="name" required="required" placeholder="name"></td>
                         <td><input type="text" name="lecturer" required="required" placeholder="lecturer"></td>
                         <td>
