@@ -25,7 +25,7 @@
 
 /* --------- flex --------- */
 nav {
-    flex: 2 0 100px;
+    flex: 2 2 10em;
 }
 
 .contentBody {
@@ -34,10 +34,10 @@ nav {
 }
 
 .contentTables {
-    flex: 5 1 50%;
+    flex: 5 0 50%;
 }
 
-/* ------- Background ----- */
+/*!* ------- Background ----- *!*/
 body {
     margin: 0;
 }
@@ -72,11 +72,26 @@ footer {
 }
 
 footer section p,
-footer section a{
+footer section a {
     color: #1f1f1f;
 }
 
 /* ---------- Padding, margin ------- */
+table tr th,
+table tr td {
+    text-align: center;
+}
+
+table tr th {
+    font-size: 1.6em;
+    /*margin: auto;*/
+}
+
+table tr th input {
+    font-size: 0.9em;
+    /*margin: auto;*/
+}
+
 header {
     /*padding-top: 1.5em;*/
 }
@@ -91,7 +106,7 @@ header h1 {
 header img {
     padding: 1em;
     width: 6em;
-    height:4em;
+    height: 4em;
 }
 
 nav div {
@@ -137,11 +152,11 @@ nav {
 }
 
 h1 {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 p {
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
 }
 
 nav div {
@@ -159,6 +174,9 @@ footer p, footer a {
 }
 
 /*----- Tables row's color -----*/
+table tr th {
+    font-weight: normal;
+}
 
 table tr:nth-child(odd) {
     background-color: lightsteelblue;
@@ -170,7 +188,7 @@ table tr:nth-child(even) {
     color: black;
 }
 
-table tr:nth-child(1) {
+table tr:first-child {
     background-color: #203F66;
     color: white;
 }
@@ -189,15 +207,66 @@ table tr td {
     text-align: center;
 }
 
+/*table tr td input*/
+/*{*/
+    /*width:20%;*/
+/*}*/
+
+/*table{table-layout:fixed;}*/
+/*td{width:1px;white-space:nowrap;}*/
+
+/*table {*/
+    /*table-layout: fixed;*/
+    /*!*width: 80%;*!*/
+    /*white-space: nowrap;*/
+/*}*/
+/*table td {*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+/*}*/
+
+/*.lp-column {*/
+    /*width: 3%;*/
+/*}*/
+
+/*.index-column {*/
+    /*width: 6%;*/
+/*}*/
+
+/*.firstname-column {*/
+    /*width: 10%;*/
+/*}*/
+
+/*.lastname-column {*/
+    /*width: 100px;*/
+/*}*/
+
+/*.birthday-column {*/
+    /*width: 100px;*/
+/*}*/
+
+
+table tr th input,
+table tr td input
+{
+    width: auto;
+}
+
+table tr th input,
+table tr th select {
+    text-align: center;
+}
+
 table tr th input,
 table tr td input,
 table tr th select,
 table tr td select {
-    width: 100%;
+    /*width: 100%;*/
     background-color: inherit;
     border: none;
     color: inherit;
-    padding: 0.2em;
+    /*padding: 0.2em;*/
 }
 
 table tr th input:invalid,
@@ -265,4 +334,44 @@ table tr td input::placeholder {
     background: url('./assets/edit.png') no-repeat center;
     background-size: 80% 80%;
     padding: 1em;
+}
+
+@media print {
+    body,
+    body a,
+    input,
+    select,
+    table tr:nth-child(odd),
+    table tr:nth-child(even),
+    table tr:hover,
+    ::placeholder {
+        color: black;
+        background-color: white;
+    }
+
+    nav,
+    footer,
+    table tr:last-child,
+    table tr th:last-child,
+    table tr td:last-child,
+    header {
+        display: none;
+    }
+
+    table tr th {
+        font-size: larger;
+    }
+
+    table tr th input {
+        font-size: 1em;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    tr {
+        border: solid;
+        border-width: 1px 0;
+    }
 }
