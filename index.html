@@ -35,9 +35,9 @@
                         <th class="birthday-column">
                             <input type="text" name="birthdayColumn" onMouseOver="this.type='date'"
                                    onMouseOut="this.type='text'"
-                                   placeholder="Date of birth">
+                                   placeholder="Birthday">
                         </th>
-                        <th>Actions</th>
+                        <th class="actions-column">Actions</th>
                     </tr>
                     <tr>
                         <td class="lp-column">1</td>
@@ -45,7 +45,7 @@
                         <td class="firstname-column"><input type="text" name="firstName" value="Jan" placeholder="First name"></td>
                         <td class="lastname-column"><input type="text" name="lastName" value="Nowak" placeholder="Last name"></td>
                         <td class="birthday-column"><input type="date" name="birthday" value="1995-02-12" required="required"></td>
-                        <td>
+                        <td class="actions-column">
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
                         </td>
@@ -56,7 +56,7 @@
                         <td class="firstname-column"><input type="text" name="firstName" value="Adam" placeholder="First name"></td>
                         <td class="lastname-column"><input type="text" name="lastName" value="Kowalski" placeholder="Last name"></td>
                         <td class="birthday-column  "><input type="date" name="birthday" value="1995-12-13" required="required"></td>
-                        <td>
+                        <td class="actions-column">
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
                         </td>
@@ -68,7 +68,7 @@
                         <td class="lastname-column"><input type="text" name="lastName" value="Pierwszy" placeholder="Last name"></td>
                         <td class="birthday-column">
                             <input type="date" name="birthday" value="1994-01-01" required="required"></td>
-                        <td>
+                        <td class="actions-column">
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
                         </td>
@@ -81,7 +81,7 @@
                         <td class="lastname-column"><input type="text" name="lastName" required="required" placeholder="last name"></td>
                         <td class="birthday-column"><input type="text" onfocus="(this.type='date')" onblur="this.type='text'" name="birthday"
                                    required="required" placeholder="Date of birth"></td>
-                        <td>
+                        <td class="actions-column">
                             <button class="add-student-button" type="submit"></button>
                         </td>
                     </tr>
@@ -94,49 +94,50 @@
             <form>
                 <table class="student-grades-table">
                     <tr>
-                        <th>Lp</th>
-                        <th><input type="text" name="valueColumn" placeholder="Value">
+                        <th class="lp-column">Lp</th>
+                        <th class="value-column"><input type="text" name="valueColumn" placeholder="Value">
                         </th>
-                        <th><input type="text" name="date" onMouseOver="this.type='date'"
+                        <th class="birthday-column"><input type="text" name="date" onMouseOver="this.type='date'"
                                    onMouseOut="this.type='text'"
-                                   placeholder="Date of birth">
+                                   placeholder="Birthday">
                         </th>
-                        <th>
-                            <select name="course" id="courseColumnSelector">
-                                <option value="Angielski" selected>Angielski</option>
+                        <th class="course-column">
+                            <select  name="course" id="courseColumnSelector">
+                                <option value="Przedmiot" selected>Przedmiot</option>
+                                <option value="Angielski">Angielski</option>
                                 <option value="Niemiecki">Niemiecki</option>
                                 <option value="WF">WF</option>
                             </select>
                         </th>
-                        <th>Actions</th>
+                        <th class="actions-column">Actions</th>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=4.0></td>
-                        <td><input type="date" name="date" value=2018-05-10 required="required"></td>
-                        <td>
+                        <td class="lp-column">1</td>
+                        <td class="value-column"><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=4.0></td>
+                        <td class="birthday-column"><input type="date" name="date" value=2018-05-10 required="required"></td>
+                        <td class="course-column">
                             <select name="course" id="1courseSelector">
                                 <option value="Angielski" selected>Angielski</option>
                                 <option value="Niemiecki">Niemiecki</option>
                                 <option value="WF">WF</option>
                             </select>
-                        <td>
+                        <td class="actions-column">
                             <button class="edit-button" type="button"></button>
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=5.0></td>
-                        <td><input type="date" name="date" value=2018-05-14 required="required"></td>
-                        <td>
+                        <td class="lp-column">2</td>
+                        <td class="value-column"><input type="number" name="value" step=0.5 min=2.0 max=5.0 value=5.0></td>
+                        <td class="birthday-column"><input type="date" name="date" value=2018-05-14 required="required"></td>
+                        <td class="course-column">
                             <select name="course" id="2courseSelector">
                                 <option value="Angielski">Angielski</option>
                                 <option value="Niemiecki" selected>Niemiecki</option>
                                 <option value="WF">WF</option>
                             </select>
-                        <td>
+                        <td class="actions-column">
                             <button class="edit-button" type="button"></button>
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
@@ -144,19 +145,19 @@
                     </tr>
                     <!-- Empty row for adding new grade -->
                     <tr>
-                        <td>3</td>
-                        <td><input type="number" name="value" step=0.5 min=2.0 max=5.0 required="required"
+                        <td class="lp-column">3</td>
+                        <td class="value-column"><input type="number" name="value" step=0.5 min=2.0 max=5.0 required="required"
                                    placeholder="value"></td>
-                        <td><input type="text" onfocus="(this.type='date')" onmouseout="this.type='text'" name="date"
+                        <td class="birthday-column"><input type="text" onfocus="(this.type='date')" onmouseout="this.type='text'" name="date"
                                    required="required" placeholder="Date of birth"></td>
-                        <td>
+                        <td class="course-column">
                             <select name="course" id="3courseSelector">
                                 <option value="Angielski" selected>Angielski</option>
                                 <option value="Niemiecki">Niemiecki</option>
                                 <option value="WF">WF</option>
                             </select>
                         </td>
-                        <td>
+                        <td class="actions-column">
                             <button class="add-button" type="submit"></button>
                         </td>
                     </tr>
@@ -169,28 +170,28 @@
             <form>
                 <table class="course-list-table">
                     <tr>
-                        <th>Lp</th>
-                        <th><input type="text" name="nameColumn" placeholder="Name">
+                        <th class="lp-column">Lp</th>
+                        <th class="name-column"><input type="text" name="nameColumn" placeholder="Name">
                         </th>
-                        <th><input type="text" name="lecturerColumn" placeholder="Lecturer">
+                        <th class="lecturer-column"><input type="text" name="lecturerColumn" placeholder="Lecturer">
                         </th>
-                        <th>Actions</th>
+                        <th class="actions-column">Actions</th>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td><input type="text" name="name" value="Angielski" placeholder="Name"></td>
-                        <td><input type="text" name="lecturer" value="Jim Beam" placeholder="Lecturer"></td>
-                        <td>
+                        <td class="lp-column">1</td>
+                        <td class="name-column"><input type="text" name="name" value="Angielski" placeholder="Name"></td>
+                        <td class="lecturer-column"><input type="text" name="lecturer" value="Jim Beam" placeholder="Lecturer"></td>
+                        <td class="actions-column">
                             <button class="edit-button" type="button"></button>
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td><input type="text" name="name" value="Niemiecki" placeholder="Name"></td>
-                        <td><input type="text" name="lecturer" value="Anna Mądra" placeholder="Lecturer"></td>
-                        <td>
+                        <td class="lp-column">2</td>
+                        <td class="name-column"><input type="text" name="name" value="Niemiecki" placeholder="Name"></td>
+                        <td class="lecturer-column"><input type="text" name="lecturer" value="Anna Mądra" placeholder="Lecturer"></td>
+                        <td class="actions-column">
                             <button class="edit-button" type="button"></button>
                             <button class="delete-button" type="button"></button>
                             <button class="more-info-button" type="button"></button>
@@ -198,10 +199,10 @@
                     </tr>
                     <!-- Empty row for adding new course -->
                     <tr>
-                        <td>3</td>
-                        <td><input type="text" name="name" required="required" placeholder="name"></td>
-                        <td><input type="text" name="lecturer" required="required" placeholder="lecturer"></td>
-                        <td>
+                        <td class="lp-column">3</td>
+                        <td class="name-column"><input type="text" name="name" required="required" placeholder="name"></td>
+                        <td class="lecturer-column"><input type="text" name="lecturer" required="required" placeholder="lecturer"></td>
+                        <td class="actions-column">
                             <button class="add-button" type="submit"></button>
                         </td>
                     </tr>

@@ -25,7 +25,7 @@
 
 /* --------- flex --------- */
 nav {
-    flex: 2 2 10em;
+    flex: 2 1 10em;
 }
 
 .contentBody {
@@ -34,7 +34,7 @@ nav {
 }
 
 .contentTables {
-    flex: 5 0 50%;
+    flex: 5 0 75%;
 }
 
 /*!* ------- Background ----- *!*/
@@ -90,6 +90,11 @@ table tr th {
 table tr th input {
     font-size: 0.9em;
     /*margin: auto;*/
+}
+
+table th select {
+    font-size: 0.85em;
+    text-align: center;
 }
 
 header {
@@ -207,45 +212,89 @@ table tr td {
     text-align: center;
 }
 
-/*table tr td input*/
-/*{*/
-    /*width:20%;*/
-/*}*/
+table {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
 
-/*table{table-layout:fixed;}*/
-/*td{width:1px;white-space:nowrap;}*/
+table td,
+table th{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-/*table {*/
-    /*table-layout: fixed;*/
-    /*!*width: 80%;*!*/
-    /*white-space: nowrap;*/
-/*}*/
-/*table td {*/
-    /*white-space: nowrap;*/
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
-/*}*/
+.lp-column {
+    width: 0.8em;
+}
 
-/*.lp-column {*/
-    /*width: 3%;*/
-/*}*/
+.index-column {
+    width: 2em;
+}
 
-/*.index-column {*/
-    /*width: 6%;*/
-/*}*/
+.index-column input {
+    text-align: center;
+}
 
-/*.firstname-column {*/
-    /*width: 10%;*/
-/*}*/
+.firstname-column {
+    width: 3em;
+}
 
-/*.lastname-column {*/
-    /*width: 100px;*/
-/*}*/
+.firstname-column input {
+    padding-left: 0.2em;
+}
 
-/*.birthday-column {*/
-    /*width: 100px;*/
-/*}*/
+.lastname-column {
+    width: 3em;
+}
 
+.lastname-column input {
+    padding-left: 0.2em;
+}
+
+.birthday-column {
+    width: 2em;
+}
+
+.birthday-column input {
+    text-align: center;
+}
+.actions-column {
+    width: 2em;
+}
+
+.value-column {
+    width: 1em;
+}
+
+.value-column input {
+    text-align: center;
+}
+
+.course-column {
+    width: 1.5em;
+}
+
+.course-column input {
+    text-align: center;
+}
+
+.name-column {
+    width: 2em;
+}
+
+.name-column input {
+    text-align: center;
+}
+
+.lecturer-column {
+    width: 2em;
+}
+
+.lecturer-column input {
+    padding-left:0.3em;
+}
 
 table tr th input,
 table tr td input
@@ -262,7 +311,7 @@ table tr th input,
 table tr td input,
 table tr th select,
 table tr td select {
-    /*width: 100%;*/
+    width: 100%;
     background-color: inherit;
     border: none;
     color: inherit;
