@@ -225,6 +225,10 @@ table th{
     text-overflow: ellipsis;
 }
 
+.student-list-table {
+    overflow-x:auto;
+}
+
 .lp-column {
     width: 0.8em;
 }
